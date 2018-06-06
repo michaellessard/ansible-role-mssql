@@ -1,3 +1,4 @@
+---
 galaxy_info:
   author: Michael Lessard
   description: Install Microsoft SQL Server on RHEL 7. Works based on kyleabenson mssql role. 
