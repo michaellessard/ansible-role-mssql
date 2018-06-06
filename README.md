@@ -120,18 +120,13 @@ A complete example that will install mssql, a db and the command line tool
     - name: Pause for 15 seconds for DB connection to come up
       pause:
         seconds: 15
-    - name: Create new database
-      mssql_db:
-        name: "{{ db_name }}"
-        state: present
-        login_host: "{{ db_host }}"
-        login_user: "{{ db_user }}"
-        login_password: "{{ db_password }}"
-
+    - name: Create new db
+      include_role:
+        name: michaellessard.mssql
+        tasks_from: new_db
 ```
 
 To test mssql : 
-
 ```
 $ sqlcmd -S localhost -U SA
 1> SELECT Name from sys.Databases
