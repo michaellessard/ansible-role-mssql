@@ -77,3 +77,4 @@
   shell:  MSSQL_PID="{{edition}}" MSSQL_SA_PASSWORD="{{db_password}}" /opt/mssql/bin/mssql-conf -n setup accept-eula
   register: setup_output
   failed_when: "'Setup has completed successfully. SQL Server is now starting.' not in setup_output.stdout"
+- debug: var=register
