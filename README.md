@@ -61,7 +61,7 @@ To use the default installation tasks:
 
     - hosts: db
       roles:
-         - { role: kyleabenson.mssql }
+         - { role: michaellessard.mssql }
 
 To use the installation and create a new db, I usually give the service a few seconds to come up before attempting to login:
 ```yaml
@@ -69,7 +69,7 @@ To use the installation and create a new db, I usually give the service a few se
 - hosts: db
   become: yes
   roles:
-    - { role: kyleabenson.mssql }
+    - { role: michaellessard.mssql }
   tasks:
     - name: Wait up to 60 seconds for server to become available after creation
       wait_for:
@@ -77,7 +77,7 @@ To use the installation and create a new db, I usually give the service a few se
         timeout: 60
     - name: Create new db
       include_role:
-        name: kyleabenson.mssql
+        name: michaellessard.mssql
         tasks_from: new_db
 ```
 
@@ -91,7 +91,7 @@ To use the uninstall tasks:
   tasks:
   - name: Run remove tasks from mssql-server role
     include_role:
-      name: kyleabenson.mssql
+      name: michaellessard.mssql
       tasks_from: uninstall
 ```
 
