@@ -26,7 +26,7 @@
   yum_repository:
     name: mssql-cli-tools
     description: MsSQL ommand line prod tools repo
-    file: /etc/yum.repos.d/msprod
+    file: /etc/yum.repos.d/msprod.repo
     baseurl: https://packages.microsoft.com/rhel/7/prod/
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
     gpgcheck: yes
