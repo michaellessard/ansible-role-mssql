@@ -37,11 +37,6 @@
     state: absent
   with_items: "{{unixODBC_packages}}"
 
-- name: Update all packages
-  yum:
-    name: '*'
-    state: latest
-
 - name: Install mssql-server packages
   yum:
     name: "{{item}}"
