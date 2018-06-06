@@ -130,7 +130,11 @@ A complete example that will install mssql, a db and the command line tool
 
 ```
 
+To test mssql : 
 
+$ sqlcmd -S localhost -U SA
+1> SELECT Name from sys.Databases
+2> GO 
 
 
 
