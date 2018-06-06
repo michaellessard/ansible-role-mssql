@@ -1,6 +1,6 @@
 galaxy_info:
   author: Michael Lessard
-  description: Install Microsoft SQL Server on RHEL 7. Works based on kyleabenson role. 
+  description: Install Microsoft SQL Server on RHEL 7. Works based on kyleabenson mssql role. 
   company: "Red Hat Inc"
   license: "license (BSD)"
   min_ansible_version: 2.2
