@@ -31,12 +31,6 @@
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
     gpgcheck: yes
 
-- name: Remove older unixODBC files if performing upgrade
-  yum:
-    name: "{{ item }}"
-    state: absent
-  with_items: "{{unixODBC_packages}}"
-
 - name: Install mssql-server packages
   yum:
     name: "{{item}}"
