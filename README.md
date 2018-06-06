@@ -115,7 +115,7 @@ A complete example that will install mssql, a db and the command line tool
     db_user: SA
     db_password: 1qaz2wsX
   roles:
-    -  { role: kyleabenson.mssql }
+    -  { role: michaellessard.mssql }
   tasks:
     - name: Pause for 15 seconds for DB connection to come up
       pause:
@@ -132,9 +132,11 @@ A complete example that will install mssql, a db and the command line tool
 
 To test mssql : 
 
+```
 $ sqlcmd -S localhost -U SA
 1> SELECT Name from sys.Databases
 2> GO 
+```
 
 
 
