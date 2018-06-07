@@ -63,3 +63,7 @@
     state: disabled
   when: enable_iptables
   notify: restart iptables
+
+- name: remove database files 
+  command: sudo rm -rf /var/opt/mssql/ 
+  
