@@ -47,6 +47,11 @@
     state: present
     line: 'export PATH="$PATH:/opt/mssql-tools/bin"'
   when: install_cli
+  
+- name: Install pymssql for future playbooks against DB server
+  pip:
+    name: pymssql
+    state: present
 
 - name: Add firewalld settings
   firewalld:
